@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.VendingMachineApp.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.VendingMachineApp.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_product"
+        app:singleSelection="true"
+        android:scrollbars="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rvProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/input_qty"
+        app:layout_constraintTop_toBottomOf="@+id/rvProduct"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/etQty"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/dimen_small"
+        android:hint="@string/hint_qty"
+        app:layout_constraintTop_toTopOf="@+id/tvQty"
+        app:layout_constraintStart_toEndOf="@+id/tvQty" />
+
+    <TextView
+        android:id="@+id/tvPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/input_payment"
+        app:layout_constraintTop_toBottomOf="@+id/etQty"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/etPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/dimen_small"
+        android:hint="@string/hint_payment"
+        app:layout_constraintTop_toTopOf="@+id/tvPayment"
+        app:layout_constraintStart_toEndOf="@+id/tvPayment" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginVertical="@dimen/dimen_medium"
+        app:layout_constraintTop_toBottomOf="@id/etPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

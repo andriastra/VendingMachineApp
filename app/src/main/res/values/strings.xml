@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Vending Machine App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="input_qty">Input Jumlah Pembelian</string>
+    <string name="hint_qty">3</string>
+    <string name="input_payment">Input Jumlah Pembayaran</string>
+    <string name="hint_payment">10000</string>
+    <string name="submit">Submit</string>
+    <string name="teh_botol">Teh Botol</string>
+
+
+
+
+</resources>
